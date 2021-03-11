@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './index.css';
+import config from './config.js';
 
 // Import Components
 import Nav from './Components/Nav';
