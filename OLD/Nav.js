@@ -1,9 +1,12 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+// import {Route, Switch} from 'react-router-dom';
 
-// import PhotoContainer from './PhotoContainer';
+// import Content from './Content';
+// import NotFound from './NotFound';
 
-const Nav = () => {
+
+const Nav = ({match}) => {
     return (
         <nav className="main-nav">
             <ul>
@@ -12,9 +15,6 @@ const Nav = () => {
                 <li><NavLink to="/computers">Computers</NavLink></li>
             </ul>
 
-            {/* <Route path='/cats' render={ () => <PhotoContainer title={"cats"} />} /> 
-            <Route path='/dogs' render={ () => <PhotoContainer title={"dogs"} />} /> 
-            <Route path='/computers' render={ () => <PhotoContainer title={"computers"} />} /> */}
         </nav>
     );
 }
