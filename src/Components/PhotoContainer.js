@@ -14,9 +14,13 @@ class PhotoContainer extends Component {
 
     componentDidMount() {
         this.updateTitle();
-        // console.log(this.state.title);
+    //     if (this.props.search) {
+    //         this.props.search(this.state.title);
+    //         console.log("happening")
+    //     }
     }
 
+   
     updateTitle = () => {
         let path = this.props.history.location.pathname;
         if (path.includes("/search")) {
@@ -32,7 +36,6 @@ class PhotoContainer extends Component {
 
 
     loadImages = () => {
-        // console.log(this.props.match.path)
         if (this.props.images.length > 0) {
             let results = this.props.images;
             let images = results.map(image => <Photo info={image} key={image.id} /> );
@@ -46,14 +49,13 @@ class PhotoContainer extends Component {
             // } else {
             //     <Redirect to="/" Component={NotFound} />
             // }
-        // } else {
-        //     this.setState({
-        //         title: "No Results Found"
-        //     });
+        // } else if (this.props.images.length === 0) {
+        //     <Redirect Component={NotFound} />
          }
     }
 
     render() {
+        // console.log(this.props.images.length)  - Shows it is rendering twice
         return (
             <div className="photo-container">
                 <h2>{`${this.state.title} images`}</h2>
@@ -63,9 +65,6 @@ class PhotoContainer extends Component {
             </div>
         ); 
     }
-
-    // const results = props.images;
-    // let images;
 
     
 
