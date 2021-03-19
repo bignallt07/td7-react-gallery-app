@@ -16,9 +16,10 @@ class App extends Component {
     dogs: [],
     cats: [],
     computers: [],
-    search: []
+    search: [],
   }
 
+  // Loads the 3 routed pages data on page load
   componentDidMount() {
     this.imageSearch("cats");
     this.imageSearch("dogs");
@@ -32,67 +33,44 @@ class App extends Component {
       .then(response => {
         if (query === "cats") {
           this.setState({
-            cats: response.data.photos.photo
+            cats: response.data.photos.photo,
           });
         } else if (query === "dogs") {
           this.setState({
-            dogs: response.data.photos.photo
+            dogs: response.data.photos.photo,
           });
         } else if (query === "computers") {
           this.setState({
-            computers: response.data.photos.photo
+            computers: response.data.photos.photo,
           });
+        // Not sure this is working
         } else {
           this.setState({
-            search: response.data.photos.photo
+            search: response.data.photos.photo,
           });
-          console.log(query)
-          console.log(response.data.photos.photo);
         }
-        
       });
-  }
-
-  handleSubmit = (e) => {
-      e.preventDefault();
-      const word = e.target.firstElementChild.value;
-      console.log(word); 
-      this.imageSearch(word);
-
-      // SOMEHOW, WE HAVE TO REDIRECT THE FORM
-      
   }
 
 
   render() {
     return (
       <BrowserRouter>
-        <SearchForm search={this.handleSubmit}/>
+        <SearchForm search={this.imageSearch}/>
       
         <Nav />
         <div className="container">
-          <div className="photo-container">
-            <h2>Results</h2>
-            <ul>
-              <Switch>
-                <Route exact path="/" component={() => <PhotoContainer images={this.state.cats} />} />
-                <Route path='/cats' component={() => <PhotoContainer images={this.state.cats} />}/> 
-                <Route path='/dogs' component={() => <PhotoContainer images={this.state.dogs} />} /> 
-                <Route path='/computers' component={() => <PhotoContainer images={this.state.computers} />} /> 
-                <Route path='/search/:item' component={() => <PhotoContainer images={this.state.search} />} />
-                <Route component={NotFound} /> 
-              </Switch>
-            </ul>
-          </div>
+          <Switch>
+            <Route exact path="/" component={() => <PhotoContainer images={this.state.cats} />} />
+            <Route path='/cats' component={() => <PhotoContainer images={this.state.cats} />}/> 
+            <Route path='/dogs' component={() => <PhotoContainer images={this.state.dogs} />} /> 
+            <Route path='/computers' component={() => <PhotoContainer images={this.state.computers} />} /> 
+            <Route path='/search/:item' component={() => <PhotoContainer images={this.state.search} search={this.imageSearch} />} />
+            <Route component={NotFound} /> 
+          </Switch>
         </div>   
       </BrowserRouter> 
     );
   }
 }
 export default App;
-
-
-// I NEED TO CALL IMAGESEARCH - Maybe in content
-
-// First Attempt
-

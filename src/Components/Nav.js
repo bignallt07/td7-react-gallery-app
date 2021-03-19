@@ -11,10 +11,6 @@ const Nav = () => {
                 <li><NavLink to="/dogs">Dogs</NavLink></li>
                 <li><NavLink to="/computers">Computers</NavLink></li>
             </ul>
-
-            {/* <Route path='/cats' render={ () => <PhotoContainer title={"cats"} />} /> 
-            <Route path='/dogs' render={ () => <PhotoContainer title={"dogs"} />} /> 
-            <Route path='/computers' render={ () => <PhotoContainer title={"computers"} />} /> */}
         </nav>
     );
 }
