@@ -71,6 +71,10 @@ class App extends Component {
       })
   }
 
+  /**
+   * UpdateLoadingState Function
+   * Description: Updates this.state.loading to true which enables the loading indicator to work
+   */
   updateLoadingState = (value) => {
     this.setState({
       loading: value

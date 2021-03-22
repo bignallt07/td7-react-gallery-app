@@ -34,10 +34,6 @@ If you have any suggestions to improve this app, please reach out to me on githu
 Curriculum at teamtreehouse.com
 Images from https://www.flickr.com/
 
-# Notes for Reviewer
-1. I am aiming for Exceeds, however I will accept Meets. 
-2. I believe that I have figured out the loading indicator, however I seem to be getting inconsistant results and don't understand why. If I have done this incorrectly, could you advise on why?
-3. Please see the CSS changes note (3 sections up)
 
 
 
