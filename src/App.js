@@ -35,7 +35,6 @@ class App extends Component {
     this.imageSearch("duck");
   }
   
-
  /**
   * ImageSearch Function
   * Description: Fetches images from Flickr using the axios plugin
@@ -72,6 +71,12 @@ class App extends Component {
       })
   }
 
+  updateLoadingState = (value) => {
+    this.setState({
+      loading: value
+    })
+  }
+
   /**
    * Render Function (Special Note)
    * Description: Renders the appropriate components to run the app and uses switch to load the appropriate componenet tested against the URL
@@ -80,7 +85,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <SearchForm search={this.imageSearch}/>
+        <SearchForm search={this.imageSearch} loading={this.updateLoadingState}/>
         <Nav />
         <div className="container">
           <Switch>

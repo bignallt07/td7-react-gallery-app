@@ -32,6 +32,7 @@ class SearchForm extends Component {
         this.props.history.push(redirect);
         input.value = "";
         this.props.search(this.state.searchValue);
+        this.props.loading(true);
     }
 
     /**
