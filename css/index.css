@@ -93,6 +93,12 @@ input {
   width: 100%;
 }
 
+/* ADDED STYLES FOR 404 Page and Exceeds */
+#error-404-page {
+  border: 1px solid black;
+}
+
+
 @media only screen and (max-width: 767px)  {
   body {
     padding-top: 2em;

@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# React Image Gallery
+This is an image gallery built in React that fetches images from flickr.com and renders them to the page. This app is preset with 3 categories and allows the user to search for their own images. Each call will return 24 images from flickr (unless images are not available)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Motivation 
 
-## Available Scripts
+This project was designed in line with project 7 of the Treehouse TechDegree and as a part of my developer portfolio
 
-In the project directory, you can run:
+## Build Status
 
-### `npm start`
+This piece is completed, meeting the exceeds standards of the Treehouse techdegree.
+A build version will be made available shortly.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Code Style
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+JavaScript with the React Library
 
-### `npm test`
+## Features 
+1. On load, collects data for 3 categories and stores the results in state
+2. Has a navigation bar, in which users can navigate through 3 catergories
+3. Has a search functionality which allows users to search for their own images
+4. Allows browser history (back and forward) navigation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## CSS Changes (see src - index.css)
+1. 3 Styles added to the body to create border (lines 5-8)
+2. Error404Component was designed (lines 100 - 155)
+3. Adapted Mobile Styles (lines 191 - 194)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contribution
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If you have any suggestions to improve this app, please reach out to me on github
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Credits 
+Curriculum at teamtreehouse.com
+Images from https://www.flickr.com/
 
-### `npm run eject`
+# Notes for Reviewer
+1. I am aiming for Exceeds, however I will accept Meets. 
+2. I believe that I have figured out the loading indicator, however I seem to be getting inconsistant results and don't understand why. If I have done this incorrectly, could you advise on why?
+3. Please see the CSS changes note (3 sections up)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

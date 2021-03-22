@@ -1,33 +1,44 @@
+// Imports - Note: Addition of withRouter to provide history on props
 import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
 
-
+/**
+ * SearchForm Component 
+ * @returns - rendering and functionality of the search component
+ */
 class SearchForm extends Component {
 
     state = {
-        searchValue: ''
+        searchValue: '',
     }
 
-    // componentDidUpdate() {
-    //     console.log(this.state.searchValue);
-    // }
-
+    /**
+     * handleSubmit Function
+     * Description: Handles the search function on submit. Function does 3 main things:
+     *              1. Listens to the search box, and updates state with the value entered
+     *              2. Pushs a new URL (redirect) to the history to enable browser navigation
+     *              3. Runs a new search passed through props using the searched word
+     * @param {event} e - Keyword
+     * @returns {state update, function call} - See notes above
+     */
     handleSubmit = (e) => {
-        // console.log(this.props.location.pathname)
         e.preventDefault();
         let input = e.target.firstElementChild;
         let word = input.value;
-        // this.setState({
-        //     searchValue: word
-        // })
-        // this.props.search(word);
+        this.setState({
+            searchValue: word
+        })
         let redirect = `/search/${word}`;
         this.props.history.push(redirect);
         input.value = "";
         this.props.search(this.state.searchValue);
-        console.log(this.props);
     }
 
+    /**
+     * inputChanges
+     * @param {*} e
+     * @returns {string} - updates state with the event value 
+     */
     inputChanges = (e) => {
         this.setState({ searchValue: e.target.value });
     }

@@ -1,5 +1,10 @@
+// imports
 import React from 'react';
 
+/**
+ * NotFound Component 
+ * @returns Message of no results
+ */
 const NotFound = () => {
     return (
         <ul>

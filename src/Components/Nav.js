@@ -1,15 +1,18 @@
+// Imports - Note: NavLink
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
-// import PhotoContainer from './PhotoContainer';
-
+/**
+ * Nav Component 
+ * @returns Navigation bar for the 3 pre-fetched categories
+ */
 const Nav = () => {
     return (
         <nav className="main-nav">
             <ul>
-                <li><NavLink to="/cats">Cats</NavLink></li>
-                <li><NavLink to="/dogs">Dogs</NavLink></li>
-                <li><NavLink to="/computers">Computers</NavLink></li>
+                <li><NavLink to="/giraffe">Giraffes</NavLink></li>
+                <li><NavLink to="/elephant">Elephants</NavLink></li>
+                <li><NavLink to="/duck">Ducks</NavLink></li>
             </ul>
         </nav>
     );

@@ -2,6 +2,10 @@ body {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   color: #3f4850;
+  /* Styles below added */
+  padding: 0;
+  margin: 0;
+  border-top: 20px solid rgb(255, 147, 147);
 }
 
 h2 {
@@ -27,7 +31,7 @@ a {
 
 .search-form button {
   outline: none;
-  background-color: #438bbd;
+  background-color: rgb(255, 147, 147);
   border: none;
   padding: 0px 15px;
   border-radius: 0 0.35em 0.35em 0;
@@ -52,7 +56,7 @@ input {
 
 .main-nav a {
   display: block;
-  background: #438bbd;
+  background: rgb(255, 147, 147);
   border-radius: 3px;
   padding: 5px;
   color: #fff;
@@ -61,7 +65,7 @@ input {
 .main-nav .active,
 .main-nav a:hover,
 .search-form button:hover {
-  background-color: #275270;
+  background-color: rgb(105, 105, 105);
 }
 
 .photo-container ul {
@@ -93,13 +97,74 @@ input {
   width: 100%;
 }
 
+/* ADDED STYLES FOR 404 Page and Exceeds */
+.error-404-page {
+  box-sizing: border-box;
+  padding: 0 5%;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  float: left;
+  min-height: 140px;
+}
+
+.option-1 {
+  background-color: lightgrey;
+}
+
+.option-2 {
+  background-color: rgb(255, 208, 208);
+}
+
+.option-3 {
+  background-color: rgb(255, 147, 147);
+  min-height: 140px;
+}
+
+.option-3 .number {
+  padding-top: 20px;
+}
+
+.button {
+  color: green;
+  font-size: 1.5em;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.explanation {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.number {
+  font-size: 2em;
+  margin: 0;
+}
+
 @media only screen and (max-width: 767px)  {
   body {
-    padding-top: 2em;
+    padding-top: 1.5em;
   }
 
   .photo-container li {
     margin: auto;
+  }
+
+  .box {
+    width: 100%;
   }
 }
 
@@ -121,5 +186,10 @@ input {
   .main-nav li {
     margin: 10px;
     width: 100px;
+  }
+
+  /* Added Style */
+  .box {
+    min-height: 200px;
   }
 }

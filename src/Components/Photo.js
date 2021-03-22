@@ -1,5 +1,11 @@
+// Imports
 import React from 'react';
 
+/**
+ * Photo Componenet
+ * @param {*} props 
+ * @returns list item with an image
+ */
 const Photo = (props) => {
     return (
         <li>
