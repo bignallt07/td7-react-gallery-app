@@ -34,6 +34,10 @@ If you have any suggestions to improve this app, please reach out to me on githu
 Curriculum at teamtreehouse.com
 Images from https://www.flickr.com/
 
+# Notes (for reviewer)
+I am aiming for exceeds expectations
+CSS edits notes are just above in the README file on lines 24-27
+Original mock-up images, css and html are still in this file, outside of "src". These will be deleted after 
 
 
 
