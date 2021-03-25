@@ -20,6 +20,9 @@ JavaScript with the React Library
 3. Has a search functionality which allows users to search for their own images
 4. Allows browser history (back and forward) navigation
 
+## Config File
+To ensure app works, a config file was needed which store API key for the app to work.
+
 
 ## CSS Changes (see src - index.css)
 1. 3 Styles added to the body to create border (lines 5-8)
